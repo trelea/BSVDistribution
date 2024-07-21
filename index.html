@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="./tailwind.config.js" type="module" defer></script>
+        <link rel="stylesheet" href="./css/global.css" />
+        <title>BSV Distribution</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="./js/index.js" type="module" defer></script>
+        <script src="./js/navigation.js" type="module" defer></script>
+    </head>
+    <body>
+        <main class="bg-[#D5D9EC] overflow-x-clip">
+            <!-- Header + Carousel -->
+            <div class="shadow-2xl">
+                <!-- Header Mobile breaks at Medium -->
+                <aside
+                    class="z-50 bg-white shadow-2xl h-screen w-72 hidden"
+                    id="aside_nav"
+                >
+                    <ul class="ml-10 mt-10 pr-4">
+                        <li
+                            id="asideDesprenoiBtn"
+                            class="border-b-2 text-xl font-semibold text-[#47174C] pl-1 py-3 hover:bg-gray-100"
+                        >
+                            Despre noi
+                        </li>
+                        <li
+                            id="asideProduseBtn"
+                            class="border-b-2 text-xl font-semibold text-[#47174C] pl-1 py-3 hover:bg-gray-100"
+                        >
+                            Produse
+                        </li>
+                        <li
+                            id="asideLivrareBtn"
+                            class="border-b-2 text-xl font-semibold text-[#47174C] pl-1 py-3 hover:bg-gray-100"
+                        >
+                            Livrare
+                        </li>
+                        <li
+                            id="asideContacteBtn"
+                            class="border-b-2 text-xl font-semibold text-[#47174C] pl-1 py-3 hover:bg-gray-100"
+                        >
+                            Contacte
+                        </li>
+                    </ul>
+                </aside>
+
+                <!-- Hedaer for phone -->
+                <header
+                    data-aos="fade-down"
+                    data-aos-offset="200"
+                    data-aos-delay="50"
+                    data-aos-duration="1000"
+                    class="fixed py-4 z-40 w-full px-10 flex justify-between items-center lg:hidden backdrop-blur-3xl"
+                >
+                    <img src="./assets/Logo.png" alt="" class="w-24" />
+                    <img
+                        id="aside_btn"
+                        src="./assets/menu_32dp_47174C_FILL0_wght400_GRAD0_opsz40.png"
+                        class="h-8"
+                        alt=""
+                        srcset=""
+                    />
+                </header>
+
+                <!-- header for pc and bigger -->
+                <header
+                    data-aos="fade-down"
+                    data-aos-offset="200"
+                    data-aos-delay="50"
+                    data-aos-duration="1000"
+                    class="hidden z-40 w-full fixed lg:flex lg:px-12 xl:px-24 2xl:px-48 pt-4 backdrop-blur-3xl pb-4 shadow-2xl"
+                >
+                    <div class="flex-1 flex items-center">
+                        <ul
+                            class="flex justify-between w-full lg:text-base xl:text-lg 2xl:text-xl font-semibold text-[#47174C]"
+                        >
+                            <li
+                                id="desprenoiBtn"
+                                class="hover:underline decoration-2 decoration-[#47174C]"
+                            >
+                                Despre noi
+                            </li>
+                            <li
+                                id="produseBtn"
+                                class="hover:underline decoration-2 decoration-[#47174C]"
+                            >
+                                Produse
+                            </li>
+                            <li
+                                id="livrareBtn"
+                                class="hover:underline decoration-2 decoration-[#47174C]"
+                            >
+                                Livrare
+                            </li>
+                            <li
+                                id="contacteBtn"
+                                class="hover:underline decoration-2 decoration-[#47174C]"
+                            >
+                                Contacte
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex-1 flex justify-center items-center">
+                        <img
+                            class="lg:w-20 xl:w-24 2xl:w-28"
+                            src="./assets/Logo.png"
+                            alt=""
+                        />
+                    </div>
+                    <div class="flex-1 flex justify-end items-center gap-4">
+                        <img
+                            class="lg:w-7 xl:w-8 2xl:w-9 aspect-square"
+                            src="./assets/call_32dp_47174C_FILL0_wght400_GRAD0_opsz40.png"
+                            alt=""
+                        />
+                        <h1
+                            class="lg:text-base xl:text-lg 2xl:text-xl font-semibold text-[#47174C]"
+                        >
+                            + (373) 79 812 818
+                        </h1>
+                    </div>
+                </header>
+
+                <!-- mobile carousel -->
+                <div
+                    class="swiper w-screen sm:hidden"
+                    data-aos="fade-up"
+                    data-aos-offset="200"
+                    data-aos-delay="50"
+                    data-aos-duration="500"
+                >
+                    <div class="swiper-wrapper h-screen">
+                        <div class="swiper-slide">
+                            <img src="./assets/c1.jpg" alt="" srcset="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/c2.jpg" alt="" srcset="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/c3.jpg" alt="" srcset="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/c4.jpg" alt="" srcset="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/c5.jpg" alt="" srcset="" />
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-pagination"
+                        style="
+                            --swiper-pagination-color: #751b57;
+                            --swiper-pagination-bullet-width: 20px;
+                            --swiper-pagination-bullet-height: 1px;
+                        "
+                    ></div>
+                </div>
+
+                <!-- planset  -->
+                <div
+                    class="swiper w-screen max-sm:hidden lg:hidden"
+                    data-aos="fade-up"
+                    data-aos-offset="200"
+                    data-aos-delay="50"
+                    data-aos-duration="500"
+                >
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./assets/b1.png" alt="" srcset="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/b2.png" alt="" srcset="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/b3.png" alt="" srcset="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/b4.png" alt="" srcset="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/b5.png" alt="" srcset="" />
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-pagination"
+                        style="
+                            --swiper-pagination-color: #751b57;
+                            --swiper-pagination-bullet-width: 40px;
+                            --swiper-pagination-bullet-height: 1px;
+                        "
+                    ></div>
+                </div>
+
+                <!-- pc  -->
+                <div
+                    class="swiper w-screen max-lg:hidden"
+                    data-aos="fade-up"
+                    data-aos-offset="200"
+                    data-aos-delay="50"
+                    data-aos-duration="500"
+                >
+                    <div class="swiper-wrapper 2xl:h-screen">
+                        <div class="swiper-slide">
+                            <img
+                                src="./assets/a1.png"
+                                alt=""
+                                srcset=""
+                                class="w-screen"
+                            />
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                                src="./assets/a2.png"
+                                alt=""
+                                srcset=""
+                                class="w-screen"
+                            />
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                                src="./assets/a3.png"
+                                alt=""
+                                srcset=""
+                                class="w-screen"
+                            />
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                                src="./assets/a4.png"
+                                alt=""
+                                srcset=""
+                                class="w-screen"
+                            />
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                                src="./assets/a5.png"
+                                alt=""
+                                srcset=""
+                                class="w-screen"
+                            />
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-pagination"
+                        style="
+                            --swiper-pagination-color: #751b57;
+                            --swiper-pagination-bullet-width: 80px;
+                            --swiper-pagination-bullet-height: 1px;
+                        "
+                    ></div>
+                </div>
+            </div>
+
+            <!-- Despre noi -->
+            <div id="desprenoi_View" class="pt-20 lg:pt-36 space-y-10">
+                <div
+                    class="flex justify-center items-center"
+                    data-aos="fade-down"
+                    data-aos-offset="200"
+                    data-aos-delay="50"
+                    data-aos-duration="500"
+                >
+                    <div class="relative">
+                        <h1
+                            class="text-4xl xl:text-5xl 2xl:text-7xl font-bold text-[#47174C]"
+                        >
+                            Despre noi
+                        </h1>
+                        <img
+                            class="absolute -right-4 h-6 top-6 xl:h-9 xl:-right-6 xl:top-6 2xl:-right-10 2xl:top-8 2xl:h-14"
+                            src="./assets/Logo1.png"
+                            alt=""
+                        />
+                    </div>
+                </div>
+
+                <div
+                    data-aos="fade-up"
+                    data-aos-offset="200"
+                    data-aos-delay="50"
+                    data-aos-duration="1000"
+                    class="text-[#47174C] font-medium xl:text-lg 2xl:text-xl lg:flex items-center justify-between tracking-wider space-y-10"
+                >
+                    <div
+                        class="flex-1 relative right-6 sm:right-8 md:right-10 xl:right-12 xl:top-10 2xl:-right-2 2xl:top-16"
+                    >
+                        <img src="./assets/Produsul.png" />
+                    </div>
+
+                    <div
+                        class="flex-1 px-8 relative 2xl:right-10 xl:right-24 space-y-6 lg:space-y-10"
+                    >
+                        <div
+                            class="border-l-2 border-[#CDACD1] pl-4 py-0 lg:py-3"
+                        >
+                            <p class="2xl:pr-40">
+                                Producem și exportăm din Republica Moldova
+                                fructe uscate și proaspete de calitate premium,
+                                utilizând soiul Stanley de prune. Compania
+                                noastră este certificată ISO și GLOBAL G.A.P.,
+                                iar produsele noastre ajung în întreaga lume.
+                                Satisfacția clienților este prioritatea noastră
+                                principală. La noi, calitatea se îmbină cu
+                                gusturile autentice ale Moldovei.
+                            </p>
+                        </div>
+                        <button
+                            id="mai_mult_btn"
+                            class="rounded-full flex bg-[#751B57] p-2 px-4 gap-2 ml-4 justify-center items-center lg:hidden hover:bg-opacity-75"
+                        >
+                            <h1 class="text-white text-sm font-medium">
+                                Mail mult..
+                            </h1>
+                            <img
+                                id="mai_mult_icon"
+                                class="rounded-full h-6 w-6 bg-white"
+                                src="./assets/arrow_downward_20dp_751B57_FILL0_wght400_GRAD0_opsz20.png"
+                                alt=""
+                            />
+                        </button>
+                        <ul
+                            id="mai_mult_list"
+                            class="hidden lg:block list-disc ml-8 space-y-6 2xl:pr-40"
+                        >
+                            <li>
+                                Calitate Premium: Compania noastră produce prune
+                                uscate de cea mai înaltă calitate, respectând
+                                standardele internaționale și cerințele
+                                clienților.
+                            </li>
+                            <li>
+                                Certificări: Suntem certificați ISO și GLOBAL
+                                G.A.P., garantând astfel produse sigure și
+                                sănătoase, recunoscute pe piețele
+                                internaționale.
+                            </li>
+                            <li>
+                                Sustenabilitate: Folosim numai practici agricole
+                                durabile și ecologice, contribuind la protejarea
+                                mediului și la susținerea comunităților locale.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produsul nostru -->
+            <div id="produsulnostru_View" class="pt-20 lg:pt-36 space-y-20">
+                <!-- Head -->
+                <div
+                    class="flex justify-center items-center w-full relative"
+                    data-aos="fade-down"
+                    data-aos-offset="200"
+                    data-aos-delay="50"
+                    data-aos-duration="500"
+                >
+                    <div class="relative">
+                        <h1
+                            class="text-4xl xl:text-5xl 2xl:text-7xl font-bold text-[#47174C]"
+                        >
+                            Produsul nostru
+                        </h1>
+                        <img
+                            class="absolute h-10 -left-4 top-6 xl:h-12 2xl:h-20 2xl:-left-8 2xl:top-8"
+                            src="./assets/Logo2.png"
+                            alt=""
+                        />
+                    </div>
+                    <img
+                        src="./assets/Plum -21.png"
+                        class="absolute -rotate-45 h-24 -top-16 -right-10 sm:h-28 md:h-30 lg:h-56 lg:top-5 lg:-right-20 xl:h-64 xl:top-5 xl:-right-20 2xl:h-72 2xl:top-0 2xl:-right-28"
+                        alt=""
+                    />
+                </div>
+                <!-- Package -->
+                <div
+                    class="flex justify-center items-center px-8"
+                    data-aos="fade-up"
+                    data-aos-offset="200"
+                    data-aos-delay="50"
+                    data-aos-duration="1000"
+                >
+                    <div
+                        class="rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-2xl bg-[#CDACD1] bg-opacity-30 flex flex-col items-center space-y-3.5 lg:space-y-6 max-w-[496px] relative"
+                    >
+                        <div>
+                            <img src="./assets/Frame 37 1.png" alt="" />
+                        </div>
+                        <div class="space-y-2 lg:space-y-5">
+                            <h1
+                                class="text-[#751B57] text-2xl lg:text-3xl font-semibold text-center"
+                            >
+                                Betty Pulms
+                            </h1>
+                            <p
+                                class="text-xs sm:text-sm md:text-base lg:text-lg font-normal text-[#751B57] text-opacity-70 text-center"
+                            >
+                                Produs de calitate premium din Republica
+                                Moldova. Soiul Stanley, certificat ISO și GLOBAL
+                                G.A.P. Perfect pentru o gustare sănătoasă și
+                                delicioasă.
+                            </p>
+                        </div>
+                        <img
+                            class="absolute h-9 -left-10 top-16 lg:h-16 lg:top-80 lg:-left-[68px] xl:h-20 xl:-left-[84px] 2xl:h-24 2xl:-left-[102px]"
+                            src="./assets/Frunza.png"
+                            alt=""
+                        />
+                    </div>
+                </div>
+            </div>
+
+            <!-- De ce produsul nostru -->
+            <div id="deceprodusulnostru_View" class="pt-20 lg:pt-36 space-y-20">
+                <div
+                    data-aos="fade-down"
+                    data-aos-offset="200"
+                    data-aos-delay="50"
+                    data-aos-duration="500"
+                    class="flex justify-center items-center flex-col w-screen p-10 text-center gap-3 sm:gap-5 md:gap-7 lg:gap-10 xl:gap-12 2xl:gap-14"
+                >
+                    <div class="relative">
+                        <h1
+                            class="text-4xl xl:text-5xl 2xl:text-7xl font-bold text-[#47174C]"
+                        >
+                            De ce produsul nostru ?
+                        </h1>
+                        <img
+                            class="absolute h-8 right-64 top-12 md:h-10 sm:-left-4 sm:top-5 xl:h-12 xl:-left-6 2xl:h-16 2xl:-left-8 2xl:top-10"
+                            src="./assets/Logo3.png"
+                            alt=""
+                        />
+                        <img
+                            class="absolute h-8 top-12 right-12 sm:-top-4 sm:-right-4 sm:h-10 lg:h-10 lg:-top-4 lg:-right-6 xl:h-12 xl:-top-6 2xl:h-16 2xl:-top-6 2xl:-right-8"
+                            src="./assets/Logo4.png"
+                            alt=""
+                            srcset=""
+                        />
+                    </div>
+                    <p
+                        class="text-[#47174C] text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-medium text-center 2xl:text-2xl px-6 sm:px-12 md:px-24 lg:px-40 xl:px-52 2xl:px-96"
+                    >
+                        Ne concentrăm pe îmbunătățirea constantă a serviciilor
+                        și a ofertei noastre, răspunzând prompt și eficient
+                        cerințelor fiecărui client.
+                    </p>
+                </div>
+
+                <div
+                    class="px-10 flex flex-col gap-10 relative"
+                    data-aos="fade-left"
+                    data-aos-offset="200"
+                    data-aos-delay="50"
+                    data-aos-duration="500"
+                >
+                    <div
+                        class="flex justify-center translate-x-4 md:translate-x-6 xl:translate-x-24"
+                    >
+                        <img
+                            data-aos="fade-up"
+                            data-aos-offset="200"
+                            data-aos-delay="50"
+                            data-aos-duration="1000"
+                            src="./assets/Pachet.png"
+                            class="h-72 sm:h-80 md:h-96 lg:w-1/3 lg:h-fit"
+                            alt=""
+                        />
+                    </div>
+                    <div class="flex flex-col gap-2 z-20">
+                        <div
+                            data-aos="fade-right"
+                            data-aos-offset="200"
+                            data-aos-delay="50"
+                            data-aos-duration="2000"
+                            class="flex flex-col gap-1 lg:absolute lg:top-0 lg:w-1/3 lg:text-right lg:left-6 xl:left-24 lg:pl-10 xl:pl-20"
+                        >
+                            <h1
+                                class="text-[#47174C] text-lg font-bold lg:text-xl xl:text-2xl 2xl:text-3xl"
+                            >
+                                Ambalaje BIO
+                            </h1>
+                            <p
+                                class="text-[#751B57] text-xs font-normal text-opacity-70 md:text-sm xl:text-base 2xl:text-lg"
+                            >
+                                Alegem doar ambalaje bio pentru produsele
+                                noastre, astfel asigurând sustenabilitatea,
+                                protecția mediului înconjurător și oferind
+                                clienților noștri o opțiune eco-friendly.
+                            </p>
+                        </div>
+
+                        <div
+                            data-aos="fade-right"
+                            data-aos-offset="200"
+                            data-aos-delay="50"
+                            data-aos-duration="2000"
+                            class="flex flex-col gap-1 lg:absolute lg:top-1/3 lg:w-1/3 lg:text-right lg:left-6 xl:left-24 lg:pl-10 xl:pl-20"
+                        >
+                            <h1
+                                class="text-[#47174C] text-lg font-bold lg:text-xl xl:text-2xl 2xl:text-3xl"
+                            >
+                                Calitatea produselor
+                            </h1>
+                            <p
+                                class="text-[#751B57] text-xs font-normal text-opacity-70 md:text-sm xl:text-base 2xl:text-lg"
+                            >
+                                Optăm să punem accentul pe calitatea fructelor
+                                și pe procesul de producție al prunelor uscate,
+                                asigurând standarde ridicate și atenție la
+                                fiecare etapă a procesului.
+                            </p>
+                        </div>
+
+                        <div
+                            data-aos="fade-left"
+                            data-aos-offset="200"
+                            data-aos-delay="50"
+                            data-aos-duration="2000"
+                            class="flex flex-col gap-1 lg:absolute lg:top-0 lg:w-1/3 lg:right-20 xl:right-10 2xl:right-28 lg:pr-10 xl:pr-20"
+                        >
+                            <h1
+                                class="text-[#47174C] text-lg font-bold lg:text-xl xl:text-2xl 2xl:text-3xl"
+                            >
+                                Pruduse naturale
+                            </h1>
+                            <p
+                                class="text-[#751B57] text-xs font-normal text-opacity-70 md:text-sm xl:text-base 2xl:text-lg"
+                            >
+                                În procesul nostru de producere a prunelor
+                                uscate, optăm exclusiv pentru produse naturale.
+                            </p>
+                        </div>
+
+                        <div
+                            data-aos="fade-left"
+                            data-aos-offset="200"
+                            data-aos-delay="50"
+                            data-aos-duration="2000"
+                            class="flex flex-col gap-1 lg:absolute lg:bottom-20 lg:w-1/3 lg:right-20 xl:right-10 2xl:right-28 lg:pr-10 xl:pr-20"
+                        >
+                            <h1
+                                class="text-[#47174C] text-lg font-bold lg:text-xl xl:text-2xl 2xl:text-3xl"
+                            >
+                                Prudus respectând toate normele
+                            </h1>
+                            <p
+                                class="text-[#751B57] text-xs font-normal text-opacity-70 md:text-sm xl:text-base 2xl:text-lg"
+                            >
+                                Echipa noastră dedicată monitorizează în
+                                permanență procesele pentru a ne asigura că
+                                respectăm toate reglementările și standardele în
+                                domeniul producției alimentare.
+                            </p>
+                        </div>
+                    </div>
+                    <img
+                        class="absolute bottom-14 z-10 h-24 sm:h-28 md:h-32 lg:-top-72 lg:left-0 lg:h-40 xl:h-48 2xl:h-96 max-lg:scale-x-[-1] right-0"
+                        src="./assets/Pulm3.png"
+                        alt=""
+                    />
+                </div>
+            </div>
+
+            <!-- Descopera produsul nostru -->
+            <div
+                id="descoperaprodusulnostru_View"
+                class="pt-20 lg:pt-36 space-y-10 sm:space-y-11 md:space-y-12 lg:space-y-16 xl:space-y-20 2xl:space-y-24"
+            >
+                <div
+                    data-aos="fade-down"
+                    data-aos-offset="200"
+                    data-aos-delay="50"
+                    data-aos-duration="500"
+                    class="flex justify-center items-center flex-col w-screen p-10 text-center gap-3 sm:gap-5 md:gap-7 lg:gap-10 xl:gap-12 2xl:gap-14"
+                >
+                    <div class="relative">
+                        <h1
+                            class="text-4xl xl:text-5xl 2xl:text-7xl font-bold text-[#47174C]"
+                        >
+                            Descoperă produsul nostru
+                        </h1>
+                        <img
+                            class="absolute h-8 -top-4 right-2 sm:-top-4 sm:-right-4 sm:h-10 lg:h-10 lg:-top-4 lg:-right-6 xl:h-12 xl:-top-6 2xl:h-16 2xl:-top-6 2xl:-right-8"
+                            src="./assets/Logo12.png"
+                            alt=""
+                            srcset=""
+                        />
+                    </div>
+                </div>
+
+                <div class="block lg:flex lg:px-24 xl:px-32 2xl:px-48 relative">
+                    <div
+                        class="relative hidden lg:block"
+                        data-aos="fade-up"
+                        data-aos-offset="200"
+                        data-aos-delay="50"
+                        data-aos-duration="2000"
+                    >
+                        <div
+                            class="flex justify-between border-b border-[#CDACD1] border-opacity-30 lg:gap-20 xl:gap-48 2xl:gap-56 pb-2"
+                        >
+                            <div class="flex items-center gap-4">
+                                <img
+                                    class="lg:w-7 xl:w-8 2xl:w-9 aspect-square"
+                                    src="./assets/call_32dp_47174C_FILL0_wght400_GRAD0_opsz40.png"
+                                    alt=""
+                                />
+                                <h1
+                                    class="lg:text-base xl:text-lg 2xl:text-xl font-semibold text-[#47174C]"
+                                >
+                                    + (373) 79 812 818
+                                </h1>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <img
+                                    class="lg:w-7 xl:w-8 2xl:w-9 aspect-square"
+                                    src="./assets/mail_32dp_47174C_FILL0_wght400_GRAD0_opsz40.png"
+                                    alt=""
+                                />
+                                <h1
+                                    class="lg:text-base xl:text-lg 2xl:text-xl font-semibold text-[#47174C]"
+                                >
+                                    bsvdistribution@gmail.com
+                                </h1>
+                            </div>
+                        </div>
+
+                        <img
+                            class="absolute lg:top-5 xl:top-2 2xl:-top-5 lg:h-[400px] xl:h-[500px] 2xl:h-fit"
+                            src="./assets/Pulm4.png"
+                            alt=""
+                        />
+                    </div>
+
+                    <div
+                        data-aos="fade-up"
+                        data-aos-offset="200"
+                        data-aos-delay="50"
+                        data-aos-duration="1000"
+                        class="space-y-5 max-lg:px-10 2xl:space-y-14 z-20 relative lg:pl-10 xl:pl-24 2xl:pl-44 flex-1"
+                    >
+                        <div
+                            class="space-y-1 text-center lg:text-left lg:space-y-3"
+                        >
+                            <h1
+                                class="text-[#47174C] text-2xl sm:text-3xl xl:text-4xl 2xl:text-5xl font-semibold"
+                            >
+                                Completați formularul
+                            </h1>
+                            <p
+                                class="text-[#47174C] text-xs sm:text-sm md:text-base xl:text-xl 2xl:text-2xl font-normal"
+                            >
+                                Și vom reveni in cel mai apropiat timp cu un
+                                sunet
+                            </p>
+                        </div>
+
+                        <form
+                            data-aos="fade-left"
+                            data-aos-offset="200"
+                            data-aos-delay="50"
+                            data-aos-duration="2000"
+                            action="mailto:bsvdistribution@gmail.com"
+                            method="post"
+                            class="flex flex-col gap-2 xl:gap-3"
+                        >
+                            <input
+                                class="bg-transparent focus:outline-none border xl:border-2 border-[#751B57] rounded-xl xl:rounded-2xl h-11 xl:h-14 placeholder:text-sm placeholder:font-normal xl:placeholder:text-lg xl:placeholder:font-medium placeholder:text-[#751B57] p-6"
+                                type="text"
+                                name="nume"
+                                id=""
+                                placeholder="Nume, Prenume*"
+                            />
+                            <input
+                                class="bg-transparent focus:outline-none border xl:border-2 border-[#751B57] rounded-xl xl:rounded-2xl h-11 xl:h-14 placeholder:text-sm placeholder:font-normal xl:placeholder:text-lg xl:placeholder:font-medium placeholder:text-[#751B57] p-6"
+                                type="text"
+                                name="telefon"
+                                id=""
+                                placeholder="Telefon*"
+                            />
+                            <input
+                                class="bg-transparent focus:outline-none border xl:border-2 border-[#751B57] rounded-xl xl:rounded-2xl h-11 xl:h-14 placeholder:text-sm placeholder:font-normal xl:placeholder:text-lg xl:placeholder:font-medium placeholder:text-[#751B57] p-6"
+                                type="email"
+                                name="eamil"
+                                id=""
+                                placeholder="Email*"
+                            />
+                            <div
+                                class="flex justify-center items-center lg:justify-start"
+                            >
+                                <button
+                                    type="submit"
+                                    class="bg-[#751B57] text-white h-11 xl:h-14 rounded-xl text-center lg:rounded-2xl text-base xl:text-xl font-semibold py-3 w-2/3 lg:w-1/2 hover:bg-opacity-75"
+                                >
+                                    Transmite
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <img
+                        class="h-44 sm:h-48 md:h-52 absolute -bottom-20 -left-24 sm:-left-28 md:-left-32 z-10 lg:hidden"
+                        src="./assets/Pulm4.png"
+                        alt=""
+                    />
+                </div>
+            </div>
+
+            <!-- Livrare si achitare -->
+            <div
+                id="livraresiachitare_View"
+                class="pt-40 lg:pt-72 space-y-10 md:space-y-12 lg:space-y-14 2xl:space-y-16"
+            >
+                <div
+                    data-aos="fade-down"
+                    data-aos-offset="200"
+                    data-aos-delay="50"
+                    data-aos-duration="500"
+                    class="flex justify-center items-center flex-col w-screen text-center gap-3 sm:gap-5 md:gap-7 lg:gap-10 xl:gap-12 2xl:gap-14 2xl:px-96"
+                >
+                    <div class="relative">
+                        <h1
+                            class="text-4xl xl:text-5xl 2xl:text-7xl font-bold text-[#47174C]"
+                        >
+                            Livrare și achitare
+                        </h1>
+                        <img
+                            class="absolute h-6 -left-4 -top-4 md:h-7 md:-top-5 md:-left-5 lg:-left-6 2xl:h-10 2xl:-left-10 2xl:-top-6"
+                            src="./assets/LogoIDK.png"
+                            alt=""
+                            srcset=""
+                        />
+                    </div>
+                    <p
+                        class="text-[#47174C] text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-medium text-center 2xl:text-2xl px-14 sm:px-24 md:px-36 lg:px-48 xl:px-56 2xl:px-6"
+                    >
+                        Suntem orientați spre comoditatea clienților noștri, de
+                        aceea oferim opțiuni flexibile de achitare și primire a
+                        produsului nostru.
+                    </p>
+                </div>
+
+                <div
+                    class="grid grid-cols-1 gap-4 xl:gap-6 md:grid-cols-2 lg:grid-cols-3 px-10 lg:px-12 xl:px-24 2xl:px-48"
+                >
+                    <div
+                        data-aos="fade-up"
+                        data-aos-offset="200"
+                        data-aos-delay="50"
+                        data-aos-duration="1000"
+                        class="bg-[#CDACD1] bg-opacity-30 rounded-2xl flex flex-col justify-center items-center shadow-lg hover:bg-opacity-60 py-6 px-4 gap-3 lg:py-7 lg:px-5"
+                    >
+                        <div class="flex justify-center items-center">
+                            <img
+                                class="w-11 h-11 aspect-square lg:h-16 lg:w-16 xl:h-20 xl:w-20 2xl:h-24 2xl:w-24"
+                                src="./assets/shopping_cart_24dp_47174C_FILL0_wght400_GRAD0_opsz24.png"
+                                alt=""
+                                srcset=""
+                            />
+                        </div>
+                        <div
+                            class="flex flex-col gap-1 lg:gap-2 xl:gap-3 2xl:gap-4"
+                        >
+                            <h1
+                                class="text-center text-[#47174C] __myriad text-lg font-bold xl:text-3xl xl:font-bold"
+                            >
+                                COMANDA
+                            </h1>
+                            <p
+                                class="text-center text-[#751B57] opacity-70 font-normal text-xs sm:text-sm md:text-base xl:text-lg"
+                            >
+                                Comanda se poate face fie pe site-ul nostru, fie
+                                contactându-ne la numărul de telefon.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        data-aos="fade-up"
+                        data-aos-offset="200"
+                        data-aos-delay="50"
+                        data-aos-duration="1500"
+                        class="bg-[#CDACD1] bg-opacity-30 rounded-2xl flex flex-col justify-center items-center shadow-lg hover:bg-opacity-60 py-6 px-4 gap-3 lg:py-7 lg:px-5"
+                    >
+                        <div class="flex justify-center items-center">
+                            <img
+                                class="w-11 h-11 aspect-square lg:h-16 lg:w-16 xl:h-20 xl:w-20 2xl:h-24 2xl:w-24"
+                                src="./assets/local_shipping_24dp_47174C_FILL0_wght400_GRAD0_opsz24.png"
+                                alt=""
+                                srcset=""
+                            />
+                        </div>
+                        <div
+                            class="flex flex-col gap-1 lg:gap-2 xl:gap-3 2xl:gap-4"
+                        >
+                            <h1
+                                class="text-center text-[#47174C] __myriad text-lg font-bold xl:text-3xl xl:font-bold"
+                            >
+                                LIVRARE
+                            </h1>
+                            <p
+                                class="text-center text-[#751B57] opacity-70 font-normal text-xs sm:text-sm md:text-base xl:text-lg"
+                            >
+                                Oferim livrare foarte rapidă, încât să vă puteți
+                                bucura de produsul nostru în cel mai scurt timp
+                                posibil.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        data-aos="fade-up"
+                        data-aos-offset="200"
+                        data-aos-delay="50"
+                        data-aos-duration="1500"
+                        class="bg-[#CDACD1] bg-opacity-30 rounded-2xl flex flex-col justify-center items-center shadow-lg hover:bg-opacity-60 py-6 px-4 gap-3 lg:py-7 lg:px-5"
+                    >
+                        <div class="flex justify-center items-center">
+                            <img
+                                class="w-11 h-11 aspect-square lg:h-16 lg:w-16 xl:h-20 xl:w-20 2xl:h-24 2xl:w-24"
+                                src="./assets/credit_card_24dp_47174C_FILL0_wght400_GRAD0_opsz24.png"
+                                alt=""
+                                srcset=""
+                            />
+                        </div>
+                        <div
+                            class="flex flex-col gap-1 lg:gap-2 xl:gap-3 2xl:gap-4"
+                        >
+                            <h1
+                                class="text-center text-[#47174C] __myriad text-lg font-bold xl:text-3xl xl:font-bold"
+                            >
+                                ACHITARE
+                            </h1>
+                            <p
+                                class="text-center text-[#751B57] opacity-70 font-normal text-xs sm:text-sm md:text-base xl:text-lg"
+                            >
+                                Achitarea se poate efectua la primirea
+                                produsului sau la efectuarea comenzii
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <footer
+                id="footer_View"
+                class="shadow-2xl mt-24 relative"
+                data-aos="fade-up"
+                data-aos-offset="200"
+                data-aos-delay="50"
+                data-aos-duration="500"
+            >
+                <div
+                    class="bg-white grid grid-cols-1 gap-6 py-10 md:py-16 lg:py-20 md:grid-cols-3 lg:grid-cols-4"
+                >
+                    <div class="flex justify-center items-center">
+                        <img
+                            class="w-36 lg:w-40 xl:w-44 2xl:w-48"
+                            src="./assets/Logo.png"
+                            alt=""
+                        />
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                        <h1
+                            class="text-center text-[#CDACD1] text-xs font-normal md:text-sm lg:text-base"
+                        >
+                            Numărul de contac
+                        </h1>
+                        <div class="flex gap-2 justify-center items-center">
+                            <img
+                                class="h-6 w-6 lg:w-7 xl:w-8 2xl:w-9 lg:h-7 xl:h-8 2xl:h-9"
+                                src="./assets/call_32dp_47174C_FILL0_wght400_GRAD0_opsz40.png"
+                                alt=""
+                            />
+                            <h1
+                                class="text-[#47174C] text-sm font-bold lg:text-base xl:text-lg 2xl:text-xl"
+                            >
+                                + (373) 79 812 818
+                            </h1>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                        <h1
+                            class="text-center text-[#CDACD1] text-xs font-normal md:text-sm lg:text-base"
+                        >
+                            E-mail
+                        </h1>
+                        <div class="flex gap-2 justify-center items-center">
+                            <img
+                                class="h-6 w-6 lg:w-7 xl:w-8 2xl:w-9 lg:h-7 xl:h-8 2xl:h-9"
+                                src="./assets/mail_32dp_47174C_FILL0_wght400_GRAD0_opsz40.png"
+                                alt=""
+                            />
+                            <h1
+                                class="text-[#47174C] text-sm font-bold lg:text-base xl:text-lg 2xl:text-xl"
+                            >
+                                bsvdistribution@gmail.com
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-[#47174C] flex flex-row gap-1 lg:gap-2 justify-center items-center text-white font-normal text-xs py-5 sm:text-sm md:text-base lg:text-lg"
+                >
+                    <h1>Copyright</h1>
+                    <img
+                        class="aspect-square h-3 w-3 lg:w-4 lg:h-4"
+                        src="./assets/copyright_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
+                        alt=""
+                    />
+                    <h1>2024</h1>
+                </div>
+
+                <img
+                    data-aos="fade-left"
+                    data-aos-offset="200"
+                    data-aos-delay="50"
+                    data-aos-duration="1500"
+                    class="absolute w-28 right-0 -top-12 lg:w-40 lg:-top-16 xl:w-60 xl:-top-28 2xl:w-80 2xl:-top-36"
+                    src="./assets/Frunza.png"
+                    alt=""
+                />
+            </footer>
+        </main>
+
+        <script src="./js/carousel.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    </body>
+</html>
